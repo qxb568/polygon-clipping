@@ -37,7 +37,7 @@ export class Operation {
       const subject = multipolys[0]
       let i = 1
       while (i < multipolys.length) {
-        if (getBboxOverlap(multipolys[i].bbox, subject.bbox) !== null) i++
+        if (getBboxOverlap(multipolys[i].bbox, subject.bbox,0.0000001) !== null) i++
         else multipolys.splice(i, 1)
       }
     }
